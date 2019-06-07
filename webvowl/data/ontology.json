@@ -1,0 +1,772 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.4), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://bim.aalto.fi/DiCtion/Ontology", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/",
+    "version" : "0.9.1",
+    "comments" : {
+      "undefined" : "This Construction Objects ontology is known as one module of Shared Situation Picture ontology (SSPO) of DiCtion project. The purpose of this module is to support data sharing of the object information that related to the construction project. This module describes the concepts (or ‘classes’) of basic objects in the construction process and their properties and hierarchy. The core concept  is the ‘Domain Object’, which refers the top abstract concept of all the objects (physical entities, information entities, resources, activities and groups). One domain object has its own identifier (e.g. URI), and it may has a classification that classified by some classification scheme (e.g.  OmniClass). It also may have its level assignment to illustrate it belongs to which level of detail. Meanwhile, it may have its own breakdown structure, known as decomposition type. The construction objects module can be used for the use cases that collecting the basic information of the elements. \nThis module also uses relevant existing ontologies. The building topology ontology (BOT)  from W3C Linked Building Community is directly imported in order to represent location and geometric related concepts. And several concepts from IFCOWL is also used for representing some physical entities."
+    },
+    "other" : {
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.9.1",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 21,
+    "objectPropertyCount" : 12,
+    "datatypePropertyCount" : 0,
+    "individualCount" : 0
+  },
+  "class" : [ {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/ClassificationScheme",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassificationScheme"
+    },
+    "comment" : {
+      "en" : "Classification Scheme refers to the classifaction documents in the construction domain that define the taxonomies of the objects in the construction process, for example: Omniclass."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/InformationEntity",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InformationEntity"
+    },
+    "subClasses" : [ "9" ],
+    "comment" : {
+      "en" : "An superclass of all abstract objects that are carrying information, such as a BIM model, drawing, specification, message, and so on."
+    },
+    "id" : "8",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LevelAssignment"
+    },
+    "subClasses" : [ "10" ],
+    "comment" : {
+      "en" : "Level Assignment refers to the affiliated level of an object, which is defined based on possible level of detail, level of smartness or level of development scheme. An object could have multiple level assignment based on different level scheme."
+    },
+    "id" : "6"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Resource",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource"
+    },
+    "subClasses" : [ "15", "21", "24" ],
+    "comment" : {
+      "en" : "Resource concept refers to the objects within a construction project that participate in value-adding transformations but that are not ultimately transformed themselves (such as labors and equipments)."
+    },
+    "id" : "23",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevel",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SmartnessLevel"
+    },
+    "comment" : {
+      "en" : "Smartness level refers to the affiliated level of smartness for an object, which is defined based on the smartness capability of the object and correspondent smartness level scheme(such as Smart Object Capability Levels)."
+    },
+    "id" : "10",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/BuildingElement",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BuildingElement"
+    },
+    "comment" : {
+      "en" : "Constituent of a construction entity with a characteristic technical function, form or position."
+    },
+    "id" : "12",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/DecompostionType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DecompostionType"
+    },
+    "comment" : {
+      "en" : "Decompostion Type refers to the types of the domain objects that belongs to certain breakdown structure."
+    },
+    "id" : "39"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DomainObject"
+    },
+    "subClasses" : [ "42", "23", "38", "8", "13" ],
+    "comment" : {
+      "en" : "Domain objects is a abstract concept that refers to all the central objects that are discussed in the construction project planning and management. Sub-classes of the domain object include the 'Activity','Group','Information Entity','Physical Entity',and 'Resource'. Domain objects can have their specific classification that is defined by certain classification scheme in the construction domain, such as Uniformat, Omniclass and etc. Meanwhile, they can also have their level assignment that is defined based level of detail, level of development, level of application and etc."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevelScheme",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SmartnessLevelScheme"
+    },
+    "comment" : {
+      "en" : "A specific level scheme of the smartness capability."
+    },
+    "id" : "31",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/IdentifierType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IdentifierType"
+    },
+    "subClasses" : [ "17" ],
+    "comment" : {
+      "en" : "Identifier type refers to the type of the identifier, usually in the linked data the identifier type is the URI (Uniform Resource Identifier). Commonly used identifier type also includes GUID, UUID and etc."
+    },
+    "id" : "34"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Actor",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Actor"
+    },
+    "comment" : {
+      "en" : "Actor is a subclass of Resource, which refers to all the agents that are responsible of activities."
+    },
+    "id" : "24",
+    "superClasses" : [ "23" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "4", "31", "34", "39", "32" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/LevelScheme",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LevelScheme"
+    },
+    "subClasses" : [ "31" ],
+    "comment" : {
+      "en" : "Level scheme concept refers to the document that defines the specific level assignment."
+    },
+    "id" : "32"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Material",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Material"
+    },
+    "comment" : {
+      "en" : "Material refers to the physical substance that participates in the construction projectas the input of a transformation process, such as cement."
+    },
+    "id" : "19",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Activity",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity"
+    },
+    "comment" : {
+      "en" : "Activity is the concept refers to all the works (or aggregations of works) that carried out in a construction project."
+    },
+    "id" : "38",
+    "superClasses" : [ "1" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "10", "1", "6", "2", "17" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Identifier",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Identifier"
+    },
+    "comment" : {
+      "en" : "Identifier is the concept that refers a globally unique reference of the a domain object instance."
+    },
+    "id" : "17",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Location",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Location"
+    },
+    "comment" : {
+      "en" : "In construction, locations refer to particular places of work that are defined by a location breakdown structure (LBS)."
+    },
+    "id" : "15",
+    "superClasses" : [ "23", "13" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Classification",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Classification"
+    },
+    "comment" : {
+      "en" : "Classification refers to the division of objects into groups based on types that are defined and specified in construction classification scheme such as OmniClass, UniFormat and etc."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Group",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Group"
+    },
+    "comment" : {
+      "en" : "Group is a superclass refers to all kinds of grouping/collection of objects, such as work-package (group of works)."
+    },
+    "id" : "42",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Equipment",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Equipment"
+    },
+    "comment" : {
+      "en" : "Equipment is a subclass of Resource, which refers to all the equipment and tool that are used for production activities. An equipment do not have a capability to operate activity by itself automatically."
+    },
+    "id" : "21",
+    "superClasses" : [ "23", "13" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Event",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event"
+    },
+    "comment" : {
+      "en" : "‘Event’ concept refers to a record of a single occurance based on a time instant."
+    },
+    "id" : "9",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PhysicalEntity"
+    },
+    "subClasses" : [ "15", "12", "21", "19" ],
+    "comment" : {
+      "en" : "Refers to any object that has physical dimensions and a position."
+    },
+    "id" : "13",
+    "superClasses" : [ "1" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "46",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "47",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "53",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/classifiedAs",
+    "inverse" : "3",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "classifiedAs"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Refers to the relation that a domain object is classifed as a specific classification, , which is inverse of classifies."
+    },
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasAssignedLevel",
+    "inverse" : "7",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasAssignedLevel"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Refers to the relation between domain object and level assignement that a domain object has an specific level assignment, , which is inverse of hasAssignedObject."
+    },
+    "attributes" : [ "object" ],
+    "id" : "5"
+  }, {
+    "range" : "13",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "11"
+  }, {
+    "range" : "13",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/identifiedBy",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "identifiedBy"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "refers to a relationship that a domain object is identified by its identifier, which is inverse of 'identifies'."
+    },
+    "attributes" : [ "object" ],
+    "id" : "16"
+  }, {
+    "range" : "13",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "18"
+  }, {
+    "range" : "13",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/classifies",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "classifies"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Refers to the relation that a specific classification classifies a domain object, which is inverse of classifiedAs."
+    },
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasPart",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasPart"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "refers to aggregation relationship between domain objects. For example, a 'building' hasPart 'storey1'."
+    },
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/identifies",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "identifies"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "refers to a relationship that an 'identifier' identifies a domain object, which is inverse of 'identifiedBy'."
+    },
+    "attributes" : [ "object" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasSmartnessLevel",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasSmartnessLevel"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "a relationship of a domain object and its smartness capability"
+    },
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "range" : "23",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "range" : "23",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "range" : "23",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "range" : "32",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "30"
+  }, {
+    "range" : "34",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "33"
+  }, {
+    "range" : "6",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
+  }, {
+    "range" : "8",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
+  }, {
+    "range" : "1",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "range" : "1",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "range" : "1",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "a relations indicate an instance of a concept has correspondent type."
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/isAbout",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isAbout"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "refers to the relationship that an 'information entity' that has relevant information of a 'domain object'."
+    },
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "a relations indicate an instance of a concept has correspondent type."
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "45"
+  }, {
+    "range" : "19",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "a relations indicate an instance of a concept has correspondent type."
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "47"
+  }, {
+    "range" : "1",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "50"
+  }, {
+    "range" : "1",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "a relations indicate an instance of a concept has correspondent type."
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "a relations indicate an instance of a concept has correspondent type."
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasAssignedObject",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasAssignedObject"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Refers to the relation between level assignement and domain object that a level assignment has specific assigned domain objects , which is inverse of hasAssignedLevel."
+    },
+    "attributes" : [ "object" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/isBasedon",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "isBasedon"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "refers to a relationship that an 'information entity' is developed/updated based on an 'information entity'."
+    },
+    "attributes" : [ "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "49",
+    "comment" : {
+      "en" : "a relations indicate an instance of a concept has correspondent type."
+    },
+    "attributes" : [ "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasMember",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasMember"
+    },
+    "domain" : "42",
+    "comment" : {
+      "en" : "refers to the relationship of a group object and its contents(domain objects). For example, a 'workpackage' (group) 'hasMember' 'activity1' and 'activity2' (domain obejcts)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "56"
+  } ]
+}

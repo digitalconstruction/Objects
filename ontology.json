@@ -1,0 +1,452 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/ClassificationScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasType"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DecompostionType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasType"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/IdentifierType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasType"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/LevelScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasType"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevelScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasType"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Seppo Torma"
+  }, {
+    "@value" : "This Construction Objects ontology is known as one module of Shared Situation Picture ontology (SSPO) of DiCtion project. The purpose of this module is to support data sharing of the object information that related to the construction project. This module describes the concepts (or ‘classes’) of basic objects in the construction process and their properties and hierarchy. The core concept  is the ‘Domain Object’, which refers the top abstract concept of all the objects (physical entities, information entities, resources, activities and groups). One domain object has its own identifier (e.g. URI), and it may has a classification that classified by some classification scheme (e.g.  OmniClass). It also may have its level assignment to illustrate it belongs to which level of detail. Meanwhile, it may have its own breakdown structure, known as decomposition type. The construction objects module can be used for the use cases that collecting the basic information of the elements. \nThis module also uses relevant existing ontologies. The building topology ontology (BOT)  from W3C Linked Building Community is directly imported in order to represent location and geometric related concepts. And several concepts from IFCOWL is also used for representing some physical entities."
+  }, {
+    "@value" : "Yuan Zheng"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionObject/0.9.1"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.9.1"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Activity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Activity is the concept refers to all the works (or aggregations of works) that carried out in a construction project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Actor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Actor is a subclass of Resource, which refers to all the agents that are responsible of activities."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Resource"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/BuildingElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Constituent of a construction entity with a characteristic technical function, form or position."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Classification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Classification refers to the division of objects into groups based on types that are defined and specified in construction classification scheme such as OmniClass, UniFormat and etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/ClassificationScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Classification Scheme refers to the classifaction documents in the construction domain that define the taxonomies of the objects in the construction process, for example: Omniclass."
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DecompostionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Decompostion Type refers to the types of the domain objects that belongs to certain breakdown structure."
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Domain objects is a abstract concept that refers to all the central objects that are discussed in the construction project planning and management. Sub-classes of the domain object include the 'Activity','Group','Information Entity','Physical Entity',and 'Resource'. Domain objects can have their specific classification that is defined by certain classification scheme in the construction domain, such as Uniformat, Omniclass and etc. Meanwhile, they can also have their level assignment that is defined based level of detail, level of development, level of application and etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Equipment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Equipment is a subclass of Resource, which refers to all the equipment and tool that are used for production activities. An equipment do not have a capability to operate activity by itself automatically."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity"
+  }, {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Resource"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "‘Event’ concept refers to a record of a single occurance based on a time instant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/InformationEntity"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Group",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Group is a superclass refers to all kinds of grouping/collection of objects, such as work-package (group of works)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Identifier is the concept that refers a globally unique reference of the a domain object instance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/IdentifierType"
+  }, {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/IdentifierType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Identifier type refers to the type of the identifier, usually in the linked data the identifier type is the URI (Uniform Resource Identifier). Commonly used identifier type also includes GUID, UUID and etc."
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/InformationEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An superclass of all abstract objects that are carrying information, such as a BIM model, drawing, specification, message, and so on."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Level Assignment refers to the affiliated level of an object, which is defined based on possible level of detail, level of smartness or level of development scheme. An object could have multiple level assignment based on different level scheme."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/LevelScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Level scheme concept refers to the document that defines the specific level assignment."
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In construction, locations refer to particular places of work that are defined by a location breakdown structure (LBS)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity"
+  }, {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Resource"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Material"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Material",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Material refers to the physical substance that participates in the construction projectas the input of a transformation process, such as cement."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to any object that has physical dimensions and a position."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Resource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Resource concept refers to the objects within a construction project that participate in value-adding transformations but that are not ultimately transformed themselves (such as labors and equipments)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Smartness level refers to the affiliated level of smartness for an object, which is defined based on the smartness capability of the object and correspondent smartness level scheme(such as Smart Object Capability Levels)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment"
+  }, {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevelScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A specific level scheme of the smartness capability."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/LevelScheme"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/classifiedAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to the relation that a domain object is classifed as a specific classification, , which is inverse of classifies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Classification"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/classifies"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/classifies",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to the relation that a specific classification classifies a domain object, which is inverse of classifiedAs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Classification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasAssignedLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to the relation between domain object and level assignement that a domain object has an specific level assignment, , which is inverse of hasAssignedObject."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasAssignedObject"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasAssignedObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to the relation between level assignement and domain object that a level assignment has specific assigned domain objects , which is inverse of hasAssignedLevel."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasMember",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "refers to the relationship of a group object and its contents(domain objects). For example, a 'workpackage' (group) 'hasMember' 'activity1' and 'activity2' (domain obejcts)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "refers to aggregation relationship between domain objects. For example, a 'building' hasPart 'storey1'."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasSmartnessLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "a relationship of a domain object and its smartness capability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevel"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "a relations indicate an instance of a concept has correspondent type."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Classification"
+  }, {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  }, {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Identifier"
+  }, {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment"
+  }, {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/ClassificationScheme"
+  }, {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DecompostionType"
+  }, {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/IdentifierType"
+  }, {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/LevelScheme"
+  }, {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevelScheme"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/identifiedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "refers to a relationship that a domain object is identified by its identifier, which is inverse of 'identifies'."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Identifier"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/identifies",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "refers to a relationship that an 'identifier' identifies a domain object, which is inverse of 'identifiedBy'."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/isAbout",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "refers to the relationship that an 'information entity' that has relevant information of a 'domain object'."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/InformationEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/isBasedon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "refers to a relationship that an 'information entity' is developed/updated based on an 'information entity'."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/InformationEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/InformationEntity"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]
