@@ -1,18 +1,17 @@
-@prefix : <http://bim.aalto.fi/DiCtion/Ontology/> .
+@prefix : <http://w3id.org/digitalconstruction/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://bim.aalto.fi/DiCtion/Ontology/> .
+@base <http://w3id.org/digitalconstruction/> .
 
-<http://bim.aalto.fi/DiCtion/Ontology/> rdf:type owl:Ontology ;
-                                         owl:versionIRI <http://bim.aalto.fi/DiCtion/Ontology/ConstructionObject/0.9.1> ;
-                                         rdfs:comment "Seppo Torma" ,
-                                                      """This Construction Objects ontology is known as one module of Shared Situation Picture ontology (SSPO) of DiCtion project. The purpose of this module is to support data sharing of the object information that related to the construction project. This module describes the concepts (or ‘classes’) of basic objects in the construction process and their properties and hierarchy. The core concept  is the ‘Domain Object’, which refers the top abstract concept of all the objects (physical entities, information entities, resources, activities and groups). One domain object has its own identifier (e.g. URI), and it may has a classification that classified by some classification scheme (e.g.  OmniClass). It also may have its level assignment to illustrate it belongs to which level of detail. Meanwhile, it may have its own breakdown structure, known as decomposition type. The construction objects module can be used for the use cases that collecting the basic information of the elements. 
-This module also uses relevant existing ontologies. The building topology ontology (BOT)  from W3C Linked Building Community is directly imported in order to represent location and geometric related concepts. And several concepts from IFCOWL is also used for representing some physical entities.""" ,
-                                                      "Yuan Zheng" ;
-                                         owl:versionInfo "0.9.1" .
+<http://w3id.org/digitalconstruction/> rdf:type owl:Ontology ;
+                                        owl:versionIRI <http://w3id.org/digitalconstruction/objects/0.9.2> ;
+                                        <http://purl.org/dc/terms/creator> "Seppo Torma" ,
+                                                                           "Yuan Zheng" ;
+                                        rdfs:comment "This Construction Objects ontology is known as one module of Shared Situation Picture ontology (SSPO) of DiCtion project. The purpose of this module is to support data sharing of the object information that related to the construction project. This module describes the concepts (or ‘classes’) of basic objects in the construction process and their properties and hierarchy. The core concept  is the ‘Domain Object’, which refers the top abstract concept of all the objects (physical entities, information entities, resources, activities and groups). One domain object has its own identifier (e.g. URI), and it may has a classification that classified by some classification scheme (e.g.  OmniClass). It also may have its level assignment to illustrate it belongs to which level of detail. Meanwhile, it may have its own breakdown structure, known as decomposition type. The construction objects module can be used for the use cases that collecting the basic information of the elements."@en ;
+                                        owl:versionInfo "0.9.2" .
 
 #################################################################
 #    Annotation properties
@@ -26,7 +25,7 @@ This module also uses relevant existing ontologies. The building topology ontolo
 #    Object Properties
 #################################################################
 
-###  http://bim.aalto.fi/DiCtion/Ontology/classifiedAs
+###  http://w3id.org/digitalconstruction/classifiedAs
 :classifiedAs rdf:type owl:ObjectProperty ;
               owl:inverseOf :classifies ;
               rdfs:domain :DomainObject ;
@@ -34,14 +33,14 @@ This module also uses relevant existing ontologies. The building topology ontolo
               rdfs:comment "Refers to the relation that a domain object is classifed as a specific classification, , which is inverse of classifies."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/classifies
+###  http://w3id.org/digitalconstruction/classifies
 :classifies rdf:type owl:ObjectProperty ;
             rdfs:domain :Classification ;
             rdfs:range :DomainObject ;
             rdfs:comment "Refers to the relation that a specific classification classifies a domain object, which is inverse of classifiedAs."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/hasAssignedLevel
+###  http://w3id.org/digitalconstruction/hasAssignedLevel
 :hasAssignedLevel rdf:type owl:ObjectProperty ;
                   owl:inverseOf :hasAssignedObject ;
                   rdfs:domain :DomainObject ;
@@ -49,35 +48,35 @@ This module also uses relevant existing ontologies. The building topology ontolo
                   rdfs:comment "Refers to the relation between domain object and level assignement that a domain object has an specific level assignment, , which is inverse of hasAssignedObject."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/hasAssignedObject
+###  http://w3id.org/digitalconstruction/hasAssignedObject
 :hasAssignedObject rdf:type owl:ObjectProperty ;
                    rdfs:domain :LevelAssignment ;
                    rdfs:range :DomainObject ;
                    rdfs:comment "Refers to the relation between level assignement and domain object that a level assignment has specific assigned domain objects , which is inverse of hasAssignedLevel."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/hasMember
+###  http://w3id.org/digitalconstruction/hasMember
 :hasMember rdf:type owl:ObjectProperty ;
            rdfs:domain :Group ;
            rdfs:range :DomainObject ;
            rdfs:comment "refers to the relationship of a group object and its contents(domain objects). For example, a 'workpackage' (group) 'hasMember' 'activity1' and 'activity2' (domain obejcts)."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/hasPart
+###  http://w3id.org/digitalconstruction/hasPart
 :hasPart rdf:type owl:ObjectProperty ;
          rdfs:domain :DomainObject ;
          rdfs:range :DomainObject ;
          rdfs:comment "refers to aggregation relationship between domain objects. For example, a 'building' hasPart 'storey1'."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/hasSmartnessLevel
+###  http://w3id.org/digitalconstruction/hasSmartnessLevel
 :hasSmartnessLevel rdf:type owl:ObjectProperty ;
                    rdfs:domain :DomainObject ;
                    rdfs:range :SmartnessLevel ;
                    rdfs:comment "a relationship of a domain object and its smartness capability"@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/hasType
+###  http://w3id.org/digitalconstruction/hasType
 :hasType rdf:type owl:ObjectProperty ;
          rdfs:domain :Classification ,
                      :DomainObject ,
@@ -92,28 +91,28 @@ This module also uses relevant existing ontologies. The building topology ontolo
          rdfs:comment "a relations indicate an instance of a concept has correspondent type."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/identifiedBy
+###  http://w3id.org/digitalconstruction/identifiedBy
 :identifiedBy rdf:type owl:ObjectProperty ;
               rdfs:domain :DomainObject ;
               rdfs:range :Identifier ;
               rdfs:comment "refers to a relationship that a domain object is identified by its identifier, which is inverse of 'identifies'."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/identifies
+###  http://w3id.org/digitalconstruction/identifies
 :identifies rdf:type owl:ObjectProperty ;
             rdfs:domain :Identifier ;
             rdfs:range :DomainObject ;
             rdfs:comment "refers to a relationship that an 'identifier' identifies a domain object, which is inverse of 'identifiedBy'."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/isAbout
+###  http://w3id.org/digitalconstruction/isAbout
 :isAbout rdf:type owl:ObjectProperty ;
          rdfs:domain :InformationEntity ;
          rdfs:range :DomainObject ;
          rdfs:comment "refers to the relationship that an 'information entity' that has relevant information of a 'domain object'."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/isBasedon
+###  http://w3id.org/digitalconstruction/isBasedon
 :isBasedon rdf:type owl:ObjectProperty ;
            rdfs:domain :InformationEntity ;
            rdfs:range :InformationEntity ;
@@ -124,25 +123,25 @@ This module also uses relevant existing ontologies. The building topology ontolo
 #    Classes
 #################################################################
 
-###  http://bim.aalto.fi/DiCtion/Ontology/Activity
+###  http://w3id.org/digitalconstruction/Activity
 :Activity rdf:type owl:Class ;
           rdfs:subClassOf :DomainObject ;
           rdfs:comment "Activity is the concept refers to all the works (or aggregations of works) that carried out in a construction project."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/Actor
+###  http://w3id.org/digitalconstruction/Actor
 :Actor rdf:type owl:Class ;
        rdfs:subClassOf :Resource ;
        rdfs:comment "Actor is a subclass of Resource, which refers to all the agents that are responsible of activities."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/BuildingElement
+###  http://w3id.org/digitalconstruction/BuildingElement
 :BuildingElement rdf:type owl:Class ;
                  rdfs:subClassOf :PhysicalEntity ;
                  rdfs:comment "Constituent of a construction entity with a characteristic technical function, form or position."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/Classification
+###  http://w3id.org/digitalconstruction/Classification
 :Classification rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty :hasType ;
@@ -151,17 +150,17 @@ This module also uses relevant existing ontologies. The building topology ontolo
                 rdfs:comment "Classification refers to the division of objects into groups based on types that are defined and specified in construction classification scheme such as OmniClass, UniFormat and etc."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/ClassificationScheme
+###  http://w3id.org/digitalconstruction/ClassificationScheme
 :ClassificationScheme rdf:type owl:Class ;
                       rdfs:comment "Classification Scheme refers to the classifaction documents in the construction domain that define the taxonomies of the objects in the construction process, for example: Omniclass."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/DecompostionType
+###  http://w3id.org/digitalconstruction/DecompostionType
 :DecompostionType rdf:type owl:Class ;
                   rdfs:comment "Decompostion Type refers to the types of the domain objects that belongs to certain breakdown structure."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/DomainObject
+###  http://w3id.org/digitalconstruction/DomainObject
 :DomainObject rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasType ;
@@ -170,26 +169,26 @@ This module also uses relevant existing ontologies. The building topology ontolo
               rdfs:comment "Domain objects is a abstract concept that refers to all the central objects that are discussed in the construction project planning and management. Sub-classes of the domain object include the 'Activity','Group','Information Entity','Physical Entity',and 'Resource'. Domain objects can have their specific classification that is defined by certain classification scheme in the construction domain, such as Uniformat, Omniclass and etc. Meanwhile, they can also have their level assignment that is defined based level of detail, level of development, level of application and etc."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/Equipment
+###  http://w3id.org/digitalconstruction/Equipment
 :Equipment rdf:type owl:Class ;
            rdfs:subClassOf :PhysicalEntity ,
                            :Resource ;
            rdfs:comment "Equipment is a subclass of Resource, which refers to all the equipment and tool that are used for production activities. An equipment do not have a capability to operate activity by itself automatically."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/Event
+###  http://w3id.org/digitalconstruction/Event
 :Event rdf:type owl:Class ;
        rdfs:subClassOf :InformationEntity ;
        rdfs:comment "‘Event’ concept refers to a record of a single occurance based on a time instant."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/Group
+###  http://w3id.org/digitalconstruction/Group
 :Group rdf:type owl:Class ;
        rdfs:subClassOf :DomainObject ;
        rdfs:comment "Group is a superclass refers to all kinds of grouping/collection of objects, such as work-package (group of works)."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/Identifier
+###  http://w3id.org/digitalconstruction/Identifier
 :Identifier rdf:type owl:Class ;
             rdfs:subClassOf :IdentifierType ,
                             [ rdf:type owl:Restriction ;
@@ -199,18 +198,18 @@ This module also uses relevant existing ontologies. The building topology ontolo
             rdfs:comment "Identifier is the concept that refers a globally unique reference of the a domain object instance."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/IdentifierType
+###  http://w3id.org/digitalconstruction/IdentifierType
 :IdentifierType rdf:type owl:Class ;
                 rdfs:comment "Identifier type refers to the type of the identifier, usually in the linked data the identifier type is the URI (Uniform Resource Identifier). Commonly used identifier type also includes GUID, UUID and etc."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/InformationEntity
+###  http://w3id.org/digitalconstruction/InformationEntity
 :InformationEntity rdf:type owl:Class ;
                    rdfs:subClassOf :DomainObject ;
                    rdfs:comment "An superclass of all abstract objects that are carrying information, such as a BIM model, drawing, specification, message, and so on."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment
+###  http://w3id.org/digitalconstruction/LevelAssignment
 :LevelAssignment rdf:type owl:Class ;
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty :hasType ;
@@ -219,38 +218,37 @@ This module also uses relevant existing ontologies. The building topology ontolo
                  rdfs:comment "Level Assignment refers to the affiliated level of an object, which is defined based on possible level of detail, level of smartness or level of development scheme. An object could have multiple level assignment based on different level scheme."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/LevelScheme
+###  http://w3id.org/digitalconstruction/LevelScheme
 :LevelScheme rdf:type owl:Class ;
              rdfs:comment "Level scheme concept refers to the document that defines the specific level assignment."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/Location
+###  http://w3id.org/digitalconstruction/Location
 :Location rdf:type owl:Class ;
-          rdfs:subClassOf :PhysicalEntity ,
-                          :Resource ;
+          rdfs:subClassOf :PhysicalEntity ;
           owl:disjointWith :Material ;
           rdfs:comment "In construction, locations refer to particular places of work that are defined by a location breakdown structure (LBS)."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/Material
+###  http://w3id.org/digitalconstruction/Material
 :Material rdf:type owl:Class ;
           rdfs:subClassOf :PhysicalEntity ;
           rdfs:comment "Material refers to the physical substance that participates in the construction projectas the input of a transformation process, such as cement."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity
+###  http://w3id.org/digitalconstruction/PhysicalEntity
 :PhysicalEntity rdf:type owl:Class ;
                 rdfs:subClassOf :DomainObject ;
                 rdfs:comment "Refers to any object that has physical dimensions and a position."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/Resource
+###  http://w3id.org/digitalconstruction/Resource
 :Resource rdf:type owl:Class ;
           rdfs:subClassOf :DomainObject ;
           rdfs:comment "Resource concept refers to the objects within a construction project that participate in value-adding transformations but that are not ultimately transformed themselves (such as labors and equipments)."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevel
+###  http://w3id.org/digitalconstruction/SmartnessLevel
 :SmartnessLevel rdf:type owl:Class ;
                 rdfs:subClassOf :LevelAssignment ,
                                 [ rdf:type owl:Restriction ;
@@ -260,7 +258,7 @@ This module also uses relevant existing ontologies. The building topology ontolo
                 rdfs:comment "Smartness level refers to the affiliated level of smartness for an object, which is defined based on the smartness capability of the object and correspondent smartness level scheme(such as Smart Object Capability Levels)."@en .
 
 
-###  http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevelScheme
+###  http://w3id.org/digitalconstruction/SmartnessLevelScheme
 :SmartnessLevelScheme rdf:type owl:Class ;
                       rdfs:subClassOf :LevelScheme ;
                       rdfs:comment "A specific level scheme of the smartness capability."@en .

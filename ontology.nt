@@ -1,9 +1,9 @@
-<http://bim.aalto.fi/DiCtion/Ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://bim.aalto.fi/DiCtion/Ontology/> <http://www.w3.org/2002/07/owl#versionIRI> <http://bim.aalto.fi/DiCtion/Ontology/ConstructionObject/0.9.1> .
-<http://bim.aalto.fi/DiCtion/Ontology/> <http://www.w3.org/2000/01/rdf-schema#comment> "Seppo Torma" .
-<http://bim.aalto.fi/DiCtion/Ontology/> <http://www.w3.org/2000/01/rdf-schema#comment> "This Construction Objects ontology is known as one module of Shared Situation Picture ontology (SSPO) of DiCtion project. The purpose of this module is to support data sharing of the object information that related to the construction project. This module describes the concepts (or ‘classes’) of basic objects in the construction process and their properties and hierarchy. The core concept  is the ‘Domain Object’, which refers the top abstract concept of all the objects (physical entities, information entities, resources, activities and groups). One domain object has its own identifier (e.g. URI), and it may has a classification that classified by some classification scheme (e.g.  OmniClass). It also may have its level assignment to illustrate it belongs to which level of detail. Meanwhile, it may have its own breakdown structure, known as decomposition type. The construction objects module can be used for the use cases that collecting the basic information of the elements. \nThis module also uses relevant existing ontologies. The building topology ontology (BOT)  from W3C Linked Building Community is directly imported in order to represent location and geometric related concepts. And several concepts from IFCOWL is also used for representing some physical entities." .
-<http://bim.aalto.fi/DiCtion/Ontology/> <http://www.w3.org/2000/01/rdf-schema#comment> "Yuan Zheng" .
-<http://bim.aalto.fi/DiCtion/Ontology/> <http://www.w3.org/2002/07/owl#versionInfo> "0.9.1" .
+<http://w3id.org/digitalconstruction/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/digitalconstruction/> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/digitalconstruction/objects/0.9.2> .
+<http://w3id.org/digitalconstruction/> <http://purl.org/dc/terms/creator> "Seppo Torma" .
+<http://w3id.org/digitalconstruction/> <http://purl.org/dc/terms/creator> "Yuan Zheng" .
+<http://w3id.org/digitalconstruction/> <http://www.w3.org/2000/01/rdf-schema#comment> "This Construction Objects ontology is known as one module of Shared Situation Picture ontology (SSPO) of DiCtion project. The purpose of this module is to support data sharing of the object information that related to the construction project. This module describes the concepts (or ‘classes’) of basic objects in the construction process and their properties and hierarchy. The core concept  is the ‘Domain Object’, which refers the top abstract concept of all the objects (physical entities, information entities, resources, activities and groups). One domain object has its own identifier (e.g. URI), and it may has a classification that classified by some classification scheme (e.g.  OmniClass). It also may have its level assignment to illustrate it belongs to which level of detail. Meanwhile, it may have its own breakdown structure, known as decomposition type. The construction objects module can be used for the use cases that collecting the basic information of the elements."@en .
+<http://w3id.org/digitalconstruction/> <http://www.w3.org/2002/07/owl#versionInfo> "0.9.2" .
 # 
 # 
 # #################################################################
@@ -25,87 +25,87 @@
 # #################################################################
 # 
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/classifiedAs
-<http://bim.aalto.fi/DiCtion/Ontology/classifiedAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/classifiedAs> <http://www.w3.org/2002/07/owl#inverseOf> <http://bim.aalto.fi/DiCtion/Ontology/classifies> .
-<http://bim.aalto.fi/DiCtion/Ontology/classifiedAs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/classifiedAs> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/Classification> .
-<http://bim.aalto.fi/DiCtion/Ontology/classifiedAs> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the relation that a domain object is classifed as a specific classification, , which is inverse of classifies."@en .
+# http://w3id.org/digitalconstruction/classifiedAs
+<http://w3id.org/digitalconstruction/classifiedAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/classifiedAs> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/digitalconstruction/classifies> .
+<http://w3id.org/digitalconstruction/classifiedAs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/classifiedAs> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Classification> .
+<http://w3id.org/digitalconstruction/classifiedAs> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the relation that a domain object is classifed as a specific classification, , which is inverse of classifies."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/classifies
-<http://bim.aalto.fi/DiCtion/Ontology/classifies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/classifies> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/Classification> .
-<http://bim.aalto.fi/DiCtion/Ontology/classifies> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/classifies> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the relation that a specific classification classifies a domain object, which is inverse of classifiedAs."@en .
+# http://w3id.org/digitalconstruction/classifies
+<http://w3id.org/digitalconstruction/classifies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/classifies> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Classification> .
+<http://w3id.org/digitalconstruction/classifies> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/classifies> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the relation that a specific classification classifies a domain object, which is inverse of classifiedAs."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/hasAssignedLevel
-<http://bim.aalto.fi/DiCtion/Ontology/hasAssignedLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasAssignedLevel> <http://www.w3.org/2002/07/owl#inverseOf> <http://bim.aalto.fi/DiCtion/Ontology/hasAssignedObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasAssignedLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasAssignedLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasAssignedLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the relation between domain object and level assignement that a domain object has an specific level assignment, , which is inverse of hasAssignedObject."@en .
+# http://w3id.org/digitalconstruction/hasAssignedLevel
+<http://w3id.org/digitalconstruction/hasAssignedLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/hasAssignedLevel> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/digitalconstruction/hasAssignedObject> .
+<http://w3id.org/digitalconstruction/hasAssignedLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/hasAssignedLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/LevelAssignment> .
+<http://w3id.org/digitalconstruction/hasAssignedLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the relation between domain object and level assignement that a domain object has an specific level assignment, , which is inverse of hasAssignedObject."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/hasAssignedObject
-<http://bim.aalto.fi/DiCtion/Ontology/hasAssignedObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasAssignedObject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasAssignedObject> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasAssignedObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the relation between level assignement and domain object that a level assignment has specific assigned domain objects , which is inverse of hasAssignedLevel."@en .
+# http://w3id.org/digitalconstruction/hasAssignedObject
+<http://w3id.org/digitalconstruction/hasAssignedObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/hasAssignedObject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/LevelAssignment> .
+<http://w3id.org/digitalconstruction/hasAssignedObject> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/hasAssignedObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the relation between level assignement and domain object that a level assignment has specific assigned domain objects , which is inverse of hasAssignedLevel."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/hasMember
-<http://bim.aalto.fi/DiCtion/Ontology/hasMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasMember> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/Group> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasMember> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasMember> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to the relationship of a group object and its contents(domain objects). For example, a 'workpackage' (group) 'hasMember' 'activity1' and 'activity2' (domain obejcts)."@en .
+# http://w3id.org/digitalconstruction/hasMember
+<http://w3id.org/digitalconstruction/hasMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/hasMember> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Group> .
+<http://w3id.org/digitalconstruction/hasMember> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/hasMember> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to the relationship of a group object and its contents(domain objects). For example, a 'workpackage' (group) 'hasMember' 'activity1' and 'activity2' (domain obejcts)."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/hasPart
-<http://bim.aalto.fi/DiCtion/Ontology/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasPart> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to aggregation relationship between domain objects. For example, a 'building' hasPart 'storey1'."@en .
+# http://w3id.org/digitalconstruction/hasPart
+<http://w3id.org/digitalconstruction/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/hasPart> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to aggregation relationship between domain objects. For example, a 'building' hasPart 'storey1'."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/hasSmartnessLevel
-<http://bim.aalto.fi/DiCtion/Ontology/hasSmartnessLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasSmartnessLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasSmartnessLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevel> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasSmartnessLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "a relationship of a domain object and its smartness capability"@en .
+# http://w3id.org/digitalconstruction/hasSmartnessLevel
+<http://w3id.org/digitalconstruction/hasSmartnessLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/hasSmartnessLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/hasSmartnessLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/SmartnessLevel> .
+<http://w3id.org/digitalconstruction/hasSmartnessLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "a relationship of a domain object and its smartness capability"@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/hasType
-<http://bim.aalto.fi/DiCtion/Ontology/hasType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/Classification> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/Identifier> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevel> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/ClassificationScheme> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/DecompostionType> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/IdentifierType> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/LevelScheme> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevelScheme> .
-<http://bim.aalto.fi/DiCtion/Ontology/hasType> <http://www.w3.org/2000/01/rdf-schema#comment> "a relations indicate an instance of a concept has correspondent type."@en .
+# http://w3id.org/digitalconstruction/hasType
+<http://w3id.org/digitalconstruction/hasType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/hasType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Classification> .
+<http://w3id.org/digitalconstruction/hasType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/hasType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Identifier> .
+<http://w3id.org/digitalconstruction/hasType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/LevelAssignment> .
+<http://w3id.org/digitalconstruction/hasType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/SmartnessLevel> .
+<http://w3id.org/digitalconstruction/hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/ClassificationScheme> .
+<http://w3id.org/digitalconstruction/hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/DecompostionType> .
+<http://w3id.org/digitalconstruction/hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/IdentifierType> .
+<http://w3id.org/digitalconstruction/hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/LevelScheme> .
+<http://w3id.org/digitalconstruction/hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/SmartnessLevelScheme> .
+<http://w3id.org/digitalconstruction/hasType> <http://www.w3.org/2000/01/rdf-schema#comment> "a relations indicate an instance of a concept has correspondent type."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/identifiedBy
-<http://bim.aalto.fi/DiCtion/Ontology/identifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/identifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/identifiedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/Identifier> .
-<http://bim.aalto.fi/DiCtion/Ontology/identifiedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to a relationship that a domain object is identified by its identifier, which is inverse of 'identifies'."@en .
+# http://w3id.org/digitalconstruction/identifiedBy
+<http://w3id.org/digitalconstruction/identifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/identifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/identifiedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Identifier> .
+<http://w3id.org/digitalconstruction/identifiedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to a relationship that a domain object is identified by its identifier, which is inverse of 'identifies'."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/identifies
-<http://bim.aalto.fi/DiCtion/Ontology/identifies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/identifies> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/Identifier> .
-<http://bim.aalto.fi/DiCtion/Ontology/identifies> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/identifies> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to a relationship that an 'identifier' identifies a domain object, which is inverse of 'identifiedBy'."@en .
+# http://w3id.org/digitalconstruction/identifies
+<http://w3id.org/digitalconstruction/identifies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/identifies> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Identifier> .
+<http://w3id.org/digitalconstruction/identifies> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/identifies> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to a relationship that an 'identifier' identifies a domain object, which is inverse of 'identifiedBy'."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/isAbout
-<http://bim.aalto.fi/DiCtion/Ontology/isAbout> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/isAbout> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/InformationEntity> .
-<http://bim.aalto.fi/DiCtion/Ontology/isAbout> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/isAbout> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to the relationship that an 'information entity' that has relevant information of a 'domain object'."@en .
+# http://w3id.org/digitalconstruction/isAbout
+<http://w3id.org/digitalconstruction/isAbout> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/isAbout> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/InformationEntity> .
+<http://w3id.org/digitalconstruction/isAbout> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/isAbout> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to the relationship that an 'information entity' that has relevant information of a 'domain object'."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/isBasedon
-<http://bim.aalto.fi/DiCtion/Ontology/isBasedon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bim.aalto.fi/DiCtion/Ontology/isBasedon> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/InformationEntity> .
-<http://bim.aalto.fi/DiCtion/Ontology/isBasedon> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/InformationEntity> .
-<http://bim.aalto.fi/DiCtion/Ontology/isBasedon> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to a relationship that an 'information entity' is developed/updated based on an 'information entity'."@en .
+# http://w3id.org/digitalconstruction/isBasedon
+<http://w3id.org/digitalconstruction/isBasedon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/isBasedon> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/InformationEntity> .
+<http://w3id.org/digitalconstruction/isBasedon> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/InformationEntity> .
+<http://w3id.org/digitalconstruction/isBasedon> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to a relationship that an 'information entity' is developed/updated based on an 'information entity'."@en .
 # 
 # 
 # 
@@ -116,125 +116,124 @@
 # #################################################################
 # 
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/Activity
-<http://bim.aalto.fi/DiCtion/Ontology/Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/Activity> <http://www.w3.org/2000/01/rdf-schema#comment> "Activity is the concept refers to all the works (or aggregations of works) that carried out in a construction project."@en .
+# http://w3id.org/digitalconstruction/Activity
+<http://w3id.org/digitalconstruction/Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/Activity> <http://www.w3.org/2000/01/rdf-schema#comment> "Activity is the concept refers to all the works (or aggregations of works) that carried out in a construction project."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/Actor
-<http://bim.aalto.fi/DiCtion/Ontology/Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/Resource> .
-<http://bim.aalto.fi/DiCtion/Ontology/Actor> <http://www.w3.org/2000/01/rdf-schema#comment> "Actor is a subclass of Resource, which refers to all the agents that are responsible of activities."@en .
+# http://w3id.org/digitalconstruction/Actor
+<http://w3id.org/digitalconstruction/Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/Resource> .
+<http://w3id.org/digitalconstruction/Actor> <http://www.w3.org/2000/01/rdf-schema#comment> "Actor is a subclass of Resource, which refers to all the agents that are responsible of activities."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/BuildingElement
-<http://bim.aalto.fi/DiCtion/Ontology/BuildingElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/BuildingElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity> .
-<http://bim.aalto.fi/DiCtion/Ontology/BuildingElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Constituent of a construction entity with a characteristic technical function, form or position."@en .
+# http://w3id.org/digitalconstruction/BuildingElement
+<http://w3id.org/digitalconstruction/BuildingElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/BuildingElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/PhysicalEntity> .
+<http://w3id.org/digitalconstruction/BuildingElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Constituent of a construction entity with a characteristic technical function, form or position."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/Classification
-<http://bim.aalto.fi/DiCtion/Ontology/Classification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/Classification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+# http://w3id.org/digitalconstruction/Classification
+<http://w3id.org/digitalconstruction/Classification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Classification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://bim.aalto.fi/DiCtion/Ontology/hasType> .
-_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bim.aalto.fi/DiCtion/Ontology/ClassificationScheme> .
-<http://bim.aalto.fi/DiCtion/Ontology/Classification> <http://www.w3.org/2000/01/rdf-schema#comment> "Classification refers to the division of objects into groups based on types that are defined and specified in construction classification scheme such as OmniClass, UniFormat and etc."@en .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/digitalconstruction/hasType> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/digitalconstruction/ClassificationScheme> .
+<http://w3id.org/digitalconstruction/Classification> <http://www.w3.org/2000/01/rdf-schema#comment> "Classification refers to the division of objects into groups based on types that are defined and specified in construction classification scheme such as OmniClass, UniFormat and etc."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/ClassificationScheme
-<http://bim.aalto.fi/DiCtion/Ontology/ClassificationScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/ClassificationScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Classification Scheme refers to the classifaction documents in the construction domain that define the taxonomies of the objects in the construction process, for example: Omniclass."@en .
+# http://w3id.org/digitalconstruction/ClassificationScheme
+<http://w3id.org/digitalconstruction/ClassificationScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/ClassificationScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Classification Scheme refers to the classifaction documents in the construction domain that define the taxonomies of the objects in the construction process, for example: Omniclass."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/DecompostionType
-<http://bim.aalto.fi/DiCtion/Ontology/DecompostionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/DecompostionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Decompostion Type refers to the types of the domain objects that belongs to certain breakdown structure."@en .
+# http://w3id.org/digitalconstruction/DecompostionType
+<http://w3id.org/digitalconstruction/DecompostionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/DecompostionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Decompostion Type refers to the types of the domain objects that belongs to certain breakdown structure."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/DomainObject
-<http://bim.aalto.fi/DiCtion/Ontology/DomainObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/DomainObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+# http://w3id.org/digitalconstruction/DomainObject
+<http://w3id.org/digitalconstruction/DomainObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/DomainObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://bim.aalto.fi/DiCtion/Ontology/hasType> .
-_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bim.aalto.fi/DiCtion/Ontology/DecompostionType> .
-<http://bim.aalto.fi/DiCtion/Ontology/DomainObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Domain objects is a abstract concept that refers to all the central objects that are discussed in the construction project planning and management. Sub-classes of the domain object include the 'Activity','Group','Information Entity','Physical Entity',and 'Resource'. Domain objects can have their specific classification that is defined by certain classification scheme in the construction domain, such as Uniformat, Omniclass and etc. Meanwhile, they can also have their level assignment that is defined based level of detail, level of development, level of application and etc."@en .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/digitalconstruction/hasType> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/digitalconstruction/DecompostionType> .
+<http://w3id.org/digitalconstruction/DomainObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Domain objects is a abstract concept that refers to all the central objects that are discussed in the construction project planning and management. Sub-classes of the domain object include the 'Activity','Group','Information Entity','Physical Entity',and 'Resource'. Domain objects can have their specific classification that is defined by certain classification scheme in the construction domain, such as Uniformat, Omniclass and etc. Meanwhile, they can also have their level assignment that is defined based level of detail, level of development, level of application and etc."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/Equipment
-<http://bim.aalto.fi/DiCtion/Ontology/Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/Equipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity> .
-<http://bim.aalto.fi/DiCtion/Ontology/Equipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/Resource> .
-<http://bim.aalto.fi/DiCtion/Ontology/Equipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipment is a subclass of Resource, which refers to all the equipment and tool that are used for production activities. An equipment do not have a capability to operate activity by itself automatically."@en .
+# http://w3id.org/digitalconstruction/Equipment
+<http://w3id.org/digitalconstruction/Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Equipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/PhysicalEntity> .
+<http://w3id.org/digitalconstruction/Equipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/Resource> .
+<http://w3id.org/digitalconstruction/Equipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipment is a subclass of Resource, which refers to all the equipment and tool that are used for production activities. An equipment do not have a capability to operate activity by itself automatically."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/Event
-<http://bim.aalto.fi/DiCtion/Ontology/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/InformationEntity> .
-<http://bim.aalto.fi/DiCtion/Ontology/Event> <http://www.w3.org/2000/01/rdf-schema#comment> "‘Event’ concept refers to a record of a single occurance based on a time instant."@en .
+# http://w3id.org/digitalconstruction/Event
+<http://w3id.org/digitalconstruction/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/InformationEntity> .
+<http://w3id.org/digitalconstruction/Event> <http://www.w3.org/2000/01/rdf-schema#comment> "‘Event’ concept refers to a record of a single occurance based on a time instant."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/Group
-<http://bim.aalto.fi/DiCtion/Ontology/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/Group> <http://www.w3.org/2000/01/rdf-schema#comment> "Group is a superclass refers to all kinds of grouping/collection of objects, such as work-package (group of works)."@en .
+# http://w3id.org/digitalconstruction/Group
+<http://w3id.org/digitalconstruction/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/Group> <http://www.w3.org/2000/01/rdf-schema#comment> "Group is a superclass refers to all kinds of grouping/collection of objects, such as work-package (group of works)."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/Identifier
-<http://bim.aalto.fi/DiCtion/Ontology/Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/IdentifierType> .
-<http://bim.aalto.fi/DiCtion/Ontology/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+# http://w3id.org/digitalconstruction/Identifier
+<http://w3id.org/digitalconstruction/Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/IdentifierType> .
+<http://w3id.org/digitalconstruction/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://bim.aalto.fi/DiCtion/Ontology/hasType> .
-_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bim.aalto.fi/DiCtion/Ontology/IdentifierType> .
-<http://bim.aalto.fi/DiCtion/Ontology/Identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier is the concept that refers a globally unique reference of the a domain object instance."@en .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/digitalconstruction/hasType> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/digitalconstruction/IdentifierType> .
+<http://w3id.org/digitalconstruction/Identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier is the concept that refers a globally unique reference of the a domain object instance."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/IdentifierType
-<http://bim.aalto.fi/DiCtion/Ontology/IdentifierType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/IdentifierType> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier type refers to the type of the identifier, usually in the linked data the identifier type is the URI (Uniform Resource Identifier). Commonly used identifier type also includes GUID, UUID and etc."@en .
+# http://w3id.org/digitalconstruction/IdentifierType
+<http://w3id.org/digitalconstruction/IdentifierType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/IdentifierType> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier type refers to the type of the identifier, usually in the linked data the identifier type is the URI (Uniform Resource Identifier). Commonly used identifier type also includes GUID, UUID and etc."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/InformationEntity
-<http://bim.aalto.fi/DiCtion/Ontology/InformationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/InformationEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/InformationEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An superclass of all abstract objects that are carrying information, such as a BIM model, drawing, specification, message, and so on."@en .
+# http://w3id.org/digitalconstruction/InformationEntity
+<http://w3id.org/digitalconstruction/InformationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/InformationEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/InformationEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An superclass of all abstract objects that are carrying information, such as a BIM model, drawing, specification, message, and so on."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment
-<http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+# http://w3id.org/digitalconstruction/LevelAssignment
+<http://w3id.org/digitalconstruction/LevelAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/LevelAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://bim.aalto.fi/DiCtion/Ontology/hasType> .
-_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bim.aalto.fi/DiCtion/Ontology/LevelScheme> .
-<http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Level Assignment refers to the affiliated level of an object, which is defined based on possible level of detail, level of smartness or level of development scheme. An object could have multiple level assignment based on different level scheme."@en .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/digitalconstruction/hasType> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/digitalconstruction/LevelScheme> .
+<http://w3id.org/digitalconstruction/LevelAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Level Assignment refers to the affiliated level of an object, which is defined based on possible level of detail, level of smartness or level of development scheme. An object could have multiple level assignment based on different level scheme."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/LevelScheme
-<http://bim.aalto.fi/DiCtion/Ontology/LevelScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/LevelScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Level scheme concept refers to the document that defines the specific level assignment."@en .
+# http://w3id.org/digitalconstruction/LevelScheme
+<http://w3id.org/digitalconstruction/LevelScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/LevelScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Level scheme concept refers to the document that defines the specific level assignment."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/Location
-<http://bim.aalto.fi/DiCtion/Ontology/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity> .
-<http://bim.aalto.fi/DiCtion/Ontology/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/Resource> .
-<http://bim.aalto.fi/DiCtion/Ontology/Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://bim.aalto.fi/DiCtion/Ontology/Material> .
-<http://bim.aalto.fi/DiCtion/Ontology/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "In construction, locations refer to particular places of work that are defined by a location breakdown structure (LBS)."@en .
+# http://w3id.org/digitalconstruction/Location
+<http://w3id.org/digitalconstruction/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/PhysicalEntity> .
+<http://w3id.org/digitalconstruction/Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://w3id.org/digitalconstruction/Material> .
+<http://w3id.org/digitalconstruction/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "In construction, locations refer to particular places of work that are defined by a location breakdown structure (LBS)."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/Material
-<http://bim.aalto.fi/DiCtion/Ontology/Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity> .
-<http://bim.aalto.fi/DiCtion/Ontology/Material> <http://www.w3.org/2000/01/rdf-schema#comment> "Material refers to the physical substance that participates in the construction projectas the input of a transformation process, such as cement."@en .
+# http://w3id.org/digitalconstruction/Material
+<http://w3id.org/digitalconstruction/Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/PhysicalEntity> .
+<http://w3id.org/digitalconstruction/Material> <http://www.w3.org/2000/01/rdf-schema#comment> "Material refers to the physical substance that participates in the construction projectas the input of a transformation process, such as cement."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity
-<http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/PhysicalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to any object that has physical dimensions and a position."@en .
+# http://w3id.org/digitalconstruction/PhysicalEntity
+<http://w3id.org/digitalconstruction/PhysicalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/PhysicalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/PhysicalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to any object that has physical dimensions and a position."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/Resource
-<http://bim.aalto.fi/DiCtion/Ontology/Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
-<http://bim.aalto.fi/DiCtion/Ontology/Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "Resource concept refers to the objects within a construction project that participate in value-adding transformations but that are not ultimately transformed themselves (such as labors and equipments)."@en .
+# http://w3id.org/digitalconstruction/Resource
+<http://w3id.org/digitalconstruction/Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/DomainObject> .
+<http://w3id.org/digitalconstruction/Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "Resource concept refers to the objects within a construction project that participate in value-adding transformations but that are not ultimately transformed themselves (such as labors and equipments)."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevel
-<http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/LevelAssignment> .
-<http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+# http://w3id.org/digitalconstruction/SmartnessLevel
+<http://w3id.org/digitalconstruction/SmartnessLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/SmartnessLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/LevelAssignment> .
+<http://w3id.org/digitalconstruction/SmartnessLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://bim.aalto.fi/DiCtion/Ontology/hasType> .
-_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevelScheme> .
-<http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Smartness level refers to the affiliated level of smartness for an object, which is defined based on the smartness capability of the object and correspondent smartness level scheme(such as Smart Object Capability Levels)."@en .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/digitalconstruction/hasType> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/digitalconstruction/SmartnessLevelScheme> .
+<http://w3id.org/digitalconstruction/SmartnessLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Smartness level refers to the affiliated level of smartness for an object, which is defined based on the smartness capability of the object and correspondent smartness level scheme(such as Smart Object Capability Levels)."@en .
 # 
-# http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevelScheme
-<http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevelScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevelScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/LevelScheme> .
-<http://bim.aalto.fi/DiCtion/Ontology/SmartnessLevelScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific level scheme of the smartness capability."@en .
+# http://w3id.org/digitalconstruction/SmartnessLevelScheme
+<http://w3id.org/digitalconstruction/SmartnessLevelScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/SmartnessLevelScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/digitalconstruction/LevelScheme> .
+<http://w3id.org/digitalconstruction/SmartnessLevelScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific level scheme of the smartness capability."@en .
 # 
 # Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
